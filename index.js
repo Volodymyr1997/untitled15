@@ -69,5 +69,46 @@ function info (){
 
     }
 };
-let opel = new Cars(`opel`,`germani`, 2017,240,200,drive(), info()) ;
+let opel = new Cars(`opel`,`germani`, 2017,240,200,) ;
 console.log(opel);
+
+class Humen {
+constructor(name,age) {
+    this.name = name || `no name`;
+    this.age = age || `no age`;
+    }
+}
+class Cinderela extends Humen {
+    constructor(name, age, foodsize) {
+        super(name,age);
+        this.foodsize = foodsize || `no foodsize`;
+    }
+}
+class princ extends Humen{
+    constructor(name, age, shoesize) {
+        super(name, age);
+        this.shoesize = shoesize || `no shose`;
+    }
+
+    findCinderela(arry) {
+      let  find = null;
+
+     find = arry.find(item => item.foodsize === this.shoesize);
+     find ? console.log(`my cinderela is ${find.name}`) : console.log(`i not find cinderela`);
+    }
+}
+
+const prince = new princ(`Vova`,23,38);
+let cinderela1 = new Cinderela(`karina`,26,36);
+let cinderela2 = new Cinderela(`Vika`,18,37);
+let cinderela3 = new Cinderela(`Olesy`,22,37.5);
+let cinderela4 = new Cinderela(`Ira`,22,38);
+let cinderela5 = new Cinderela(`Oksana`, 30,38.5);
+let cinderela6 = new Cinderela(`lera`,19,39);
+let cinderela7 = new Cinderela(`Diana`,20,39.5)
+let cinderela8 = new Cinderela(`Dayana`,21,40);
+let cinderela9 = new Cinderela(`Solomya`,25,40.5);
+let cinderela10 = new Cinderela(`khrystyna`,21,41);
+let cindereles = [cinderela1,cinderela2,cinderela3,cinderela4,cinderela5,cinderela6,cinderela7,cinderela8,cinderela9,cinderela10];
+let findCind = prince.findCinderela(cindereles);
+
