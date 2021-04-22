@@ -158,23 +158,23 @@ Fibunachi(1,0)
 // }
 // lube(1,1)
 // console.timeEnd(`qqq`)
-let masuv = [1,2,3,4,5,6,3,12,5,87,122,1,7, ];
-let sort = masuv.sort((a,b) => {
-    console.log(a);
-    console.log(b);
-    return a - b;
-})
-console.log(sort);
-let name = [`Vika`,`Olesy`,`Ira`,`Oksana`,`Lera`,`Diana`,`Dayana`,`Solomya`,`Khrystyna`];
-
-
-
- let sort3 = name.sort((a,b) =>{
-    if (a > b){
-        return 1;
-    };
-    return -1;
-})
+// let masuv = [1,2,3,4,5,6,3,12,5,87,122,1,7, ];
+// let sort = masuv.sort((a,b) => {
+//     console.log(a);
+//     console.log(b);
+//     return a - b;
+// })
+// console.log(sort);
+// let name = [`Vika`,`Olesy`,`Ira`,`Oksana`,`Lera`,`Diana`,`Dayana`,`Solomya`,`Khrystyna`];
+//
+//
+//
+//  let sort3 = name.sort((a,b) =>{
+//     if (a > b){
+//         return 1;
+//     };
+//     return -1;
+// })
 // console.log(sort3);
 // let filter = users.age.filter({
 //     if (value.age > 18) {
@@ -191,32 +191,70 @@ let name = [`Vika`,`Olesy`,`Ira`,`Oksana`,`Lera`,`Diana`,`Dayana`,`Solomya`,`Khr
 //     }console.log( value);
 //
 // })
-let map=  users.map((value, index) => {
-    if (!( value.age > 18)) {
-        return  } else {
-        value.cars = true || newUsers.push(value)}
-    return value;})
+// let map=  users.map((value, index) => {
+//     if (!( value.age > 18)) {
+//         return  } else {
+//         value.cars = true || newUsers.push(value)}
+//     return value;})
+//
+// console.log(map);
+//  let newUsers = []
+// let find = name.find(value => value.startsWith(`V`));
+// console.log(find);
+//
+//
+// let find2 = name.findIndex(value => value.includes(`e`));
+// console.log(find2);
+//  let  find3 = users.find(value => value.name.startsWith(`V`))
+// console.log(find3.cars);
+// users.find
+// let some =  masuv.some(value => value > 18)
+//
+// console.log(some);
+// let  every = masuv.every(value => !(value = 700))
+// console.log(every);
+// let  reduse = users.reduce((acc,vale) =>
+// {if (vale.age > 18 )
+//     {vale.car = true
+//         acc.push(vale);}
+//     return acc;},newUsers);
+// console.log(reduse);
+// console.log(newUsers);
 
-console.log(map);
- let newUsers = []
-let find = name.find(value => value.startsWith(`V`));
-console.log(find);
+let green = document.getElementById(`green`);
+console.log(green);
+green.onclick = ()=> {
+    green.style.background === `green`? green.style.background = `red`: green.style.background = `green`;
 
+}
+document.forms.myForm2.someText.oninput =()=>
+{
+    let tex = document.myForm2.someText.value
+    console.log(tex);
+}
+let figny = [];
+console.log(figny);
 
-let find2 = name.findIndex(value => value.includes(`e`));
-console.log(find2);
- let  find3 = users.find(value => value.name.startsWith(`V`))
-console.log(find3.cars);
-users.find
-let some =  masuv.some(value => value > 18)
-
-console.log(some);
-let  every = masuv.every(value => !(value = 700))
-console.log(every);
-let  reduse = users.reduce((acc,vale) =>
-{if (vale.age > 18 )
-    {vale.car = true
-        acc.push(vale);}
-    return acc;},newUsers);
-console.log(reduse);
-console.log(newUsers);
+let blue = document.getElementById(`blue`);
+blue.onmousemove=(ev) =>{
+    const colorblue = ev.clientX;
+    const red= ev.clientY;
+    const ogg = (colorblue + red) /2;
+    blue.style.background = `rgb(${colorblue}, ${red}, ${ogg})`
+}
+navigator.geolocation.getCurrentPosition((data) =>
+{
+    console.log(data.coords.latitude);
+    console.log(data.coords.longitude);
+})
+let vid = document.getElementById(`vid`);
+// navigator.mediaDevices.getUserMedia({video:true})
+// .then(video => {
+//     console.log(video);
+//     vid.srcObject = video;
+//         vid.play();
+//     }
+// )
+console.log(history);
+// history.back();
+// history.forward()
