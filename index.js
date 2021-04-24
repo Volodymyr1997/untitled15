@@ -242,12 +242,23 @@ blue.onmousemove=(ev) =>{
     const ogg = (colorblue + red) /2;
     blue.style.background = `rgb(${colorblue}, ${red}, ${ogg})`
 }
-navigator.geolocation.getCurrentPosition((data) =>
+navigator.geolocation.getCurrentPosition(({coords}) =>
 {
-    console.log(data.coords.latitude);
-    console.log(data.coords.longitude);
+    console.log(coords.latitude);
+    console.log(coords.longitude);
 })
-let vid = document.getElementById(`vid`);
+// let radio = document.getElementById(`ok`)
+// let vid = document.getElementById(`vid`);
+// navigator.mediaDevices.getUserMedia({video:true})
+//     .then(video =>  {
+//         vid.srcObject = video;
+//         vid.play()
+//
+//
+//     })
+console.log(history);
+// history.back();
+// history.forward()
 // navigator.mediaDevices.getUserMedia({video:true})
 // .then(video => {
 //     console.log(video);
@@ -255,6 +266,9 @@ let vid = document.getElementById(`vid`);
 //         vid.play();
 //     }
 // )
-console.log(history);
-// history.back();
-// history.forward()
+let usersJson = JSON.stringify(users)
+let domUsers = JSON.parse(usersJson)
+localStorage.setItem(`user`, usersJson);
+console.log(domUsers);
+let get = localStorage.getItem(name,``);
+console.log(typeof get);
