@@ -272,3 +272,188 @@ localStorage.setItem(`user`, usersJson);
 console.log(domUsers);
 let get = localStorage.getItem(name,``);
 console.log(typeof get);
+
+
+// function orderTour(money) {
+//     console.log('Дякую, що звернулися до нас');
+//     console.log('Tour in progres ......');
+//     return new Promise((resolve, reject) => {
+//
+//
+//         setTimeout(() => {
+//             console.log('DONE');
+//
+//             if (money > 500) {
+//                 resolve('Єгипет');
+//             } else {
+//                 reject('вам треба більше грошей');
+//             }
+//         }, 2000);
+//     })
+// }
+//
+//
+// function prepareToTour() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log('Я забраввся!')
+//             resolve('Полетіли НАРЕШТІ !!!!');
+//         }, 1000)
+//     })
+// }
+//
+// let dvista = {name:`Vity`, maney:600};
+//
+// orderTour(dvista.maney)
+//
+//     .then((tour) => {
+//         console.log(`УРА. Лутимо в ${tour}`);
+//
+//         return prepareToTour();
+//     })
+//     .then(tourData => {
+//         console.log(tourData);
+//     })
+//     .catch(err => {
+//         console.log('___________________')
+//         console.log(err)
+//         console.log('___________________')
+//     })
+//     .finally(() => {
+//         console.log('FINAL');
+//     })
+
+
+
+
+
+
+//  function rozklad (){
+
+//     return new Promise((resolve) => { setTimeout(()=> {
+//
+//         resolve(console.log(`i woke up`))
+// return
+//     },500) })
+// };
+// function brushed() {
+//    return  new Promise((resolve) => {
+//         setTimeout(()=>{
+//            resolve (console.log(`brushed his teeth`));
+//         },1000)
+//     })
+//
+// };
+// function eats() {
+//   return   new Promise((resolve) => {
+//         setTimeout(()=> {
+//             resolve(console.log(`i have breakfast`));
+//         },3000)
+//     })
+// };
+// function jobs() {
+//    return  new Promise((resolve) => {
+//     setTimeout(()=> {
+//        resolve( console.log(`i go to jobs`));
+//     },1500)
+// })
+//
+// };
+// function work() { return new Promise( (resolve)=> {
+//     setTimeout(()=> {
+//         resolve(console.log(`i am working`))
+//     },10000)
+// })
+//
+// };
+// function home() { return new Promise((resolve)=>{
+//     setTimeout(()=> {
+//         resolve(console.log(`i go to home`));
+//     },1500)
+// })
+//
+// };
+// function diner() {return new Promise((resolve => {
+//     setTimeout(()=> {
+//         resolve(console.log(`i hev diner`));
+//     },3000)
+// }))
+//
+// }
+// rozklad()
+//     .then(()=> {
+//         }
+//     )
+//     .then(()=>
+//     {
+//         return brushed()
+//     })
+//
+//      .then(()=> {
+//          return eats()
+//      })
+//     .then(()=> {
+//         return jobs();
+//     })
+//     .then(()=> {
+//         return work();
+//         }
+//     )
+//     .then(()=> { return home();
+//         }
+//     )
+//     .then(()=> { return diner();
+//         }
+//     )
+
+
+// function myDay  (one,two, thre, fou, five, six,seven) {
+//     setTimeout(()=> {  if (one = true) {
+//          console.log(`i woke up`)
+//            return;
+//     }},1000)
+//     myDay(()=>{setTimeout(()=> {  if (one = true) {
+//         console.log(`i woke up`)
+//         return;
+//     }},1000)})
+//
+//     myDay(()=> {setTimeout(()=> {
+//         if (two = true){
+//         console.log(`brushed his teeth`);
+//         return}
+//     },2000)})
+//
+// }
+//
+// myDay(true,true)
+
+function newes() { return new Promise((resolve)=> {
+    setTimeout(()=> {
+        console.log(`all good`);
+
+    },2000)
+})
+};
+newes()
+    .then(()=> {
+
+    })
+fetch(`https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5`)
+    .then(value => {
+        return value.json()
+        console.log(value)
+    })
+    .then(kurs =>{
+        kurs.forEach(({a,s,d,f,g,h,j,k})=> {})
+    console.log(kurs)
+    })
+let set = new Set();
+set.add(2)
+set.add(23)
+set.add(2)
+set.add(243)
+set.add(2)
+console.log(set)
+let rte = [323,56,4,4,4,4,4,4,56,1];
+let rte2 = new Set(rte)
+console.log(rte2);
